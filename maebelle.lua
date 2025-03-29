@@ -2623,7 +2623,7 @@ local ca = {
     },
     MageOfShadows = {
         DisplayName = 'Mage Of Shadows',
-        Range = 40,
+        Range = 99,
         Type = 'Ranged',
         Primary = 'Staff',
         Skills = {{
@@ -5780,7 +5780,7 @@ Toggles.Killaura:OnChanged(function(cU)
                 for ds, gx in pairs(ca[aZ].Skills) do
                     local gy, gz = gx.MeleeOnBoss and a1 and 'Melee' or gx.Type or ca[aZ].Type, gx.Skill;
                     local gA = gx.MeleeOnBoss and a1 and gx.BossRange or gx.Range or ca[aZ].Range;
-                    local gB, gC = gx.Cooldown + Options.KillauraDelay.Value + math.random(0.2, 0.5),
+                    local gB, gC = gx.Cooldown + Options.KillauraDelay.Value + math.random(0.5, 1),
                         gy == 'Ranged' and a1;
 
                     local gD, ge = gC and Z or _ > 0 and Y or Z, gC and a0 or _;
@@ -5790,7 +5790,7 @@ Toggles.Killaura:OnChanged(function(cU)
                     end
                     if tick() - (gx.LastUsed or 0) >= gB then
                         if gy ~= 'Heal' and ge <= gA and a2.Value > 0 then
-                            task.wait(math.random(0.1, 0.3))
+                            task.wait(math.random(0.5, 1))
                             if gy == 'Melee' then
                                 b8:FireServer(gz, aG.Position, (gD - aG.Position).Unit)
                             elseif gy == 'Ranged' then
