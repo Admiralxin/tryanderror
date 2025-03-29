@@ -5780,7 +5780,7 @@ Toggles.Killaura:OnChanged(function(cU)
                 for ds, gx in pairs(ca[aZ].Skills) do
                     local gy, gz = gx.MeleeOnBoss and a1 and 'Melee' or gx.Type or ca[aZ].Type, gx.Skill;
                     local gA = gx.MeleeOnBoss and a1 and gx.BossRange or gx.Range or ca[aZ].Range;
-                    local gB, gC = gx.Cooldown + Options.KillauraDelay.Value + math.random(0.5, 1),
+                    local gB, gC = gx.Cooldown + Options.KillauraDelay.Value + math.random(1, 3),
                         gy == 'Ranged' and a1;
 
                     local gD, ge = gC and Z or _ > 0 and Y or Z, gC and a0 or _;
@@ -5821,7 +5821,7 @@ Toggles.Killaura:OnChanged(function(cU)
                     end
                 end
             end
-            task.wait(math.random(0.2, 0.4))
+            task.wait(math.random(1, 2))
         end
     end)
 
