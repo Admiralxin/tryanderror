@@ -2623,7 +2623,7 @@ local ca = {
     },
     MageOfShadows = {
         DisplayName = 'Mage Of Shadows',
-        Range = 99,
+        Range = 45,
         Type = 'Ranged',
         Primary = 'Staff',
         Skills = {{
@@ -2652,7 +2652,7 @@ local ca = {
             Cooldown = 1.8
         }, {
             Skill = b2:WaitForChild('MageOfShadows'):WaitForChild('ShadowChains'),
-            Cooldown = 6,
+            Cooldown = 8,
             Type = 'Remote',
             Args = 'mobTbl'
         }, {
