@@ -5785,12 +5785,12 @@ Toggles.Killaura:OnChanged(function(cU)
 
                     local gD, ge = gC and Z or _ > 0 and Y or Z, gC and a0 or _;
                     if b7 then
-                        local gE = (CFrame.new(Z + Vector3.new(0, 5, 0)) + X.CFrame.lookVector * 45).Position;
+                        local gE = (CFrame.new(Z + Vector3.new(0, 5, 0)) + X.CFrame.lookVector *(40 + math.random(-5, 5))).Position;
                         gD, ge = gE, (gE - aG.Position).magnitude
                     end
                     if tick() - (gx.LastUsed or 0) >= gB then
                         if gy ~= 'Heal' and ge <= gA and a2.Value > 0 then
-                            task.wait(math.random(0.5, 1))
+                            task.wait(math.random(0.75, 1.5))
                             if gy == 'Melee' then
                                 b8:FireServer(gz, aG.Position, (gD - aG.Position).Unit)
                             elseif gy == 'Ranged' then
@@ -5810,7 +5810,7 @@ Toggles.Killaura:OnChanged(function(cU)
                             a5 = tick()
                         end
                         if gy == 'Heal' and aH.Health.Value / aH.MaxHealth.Value < math.random(0.5, 0.65) then
-                            task.wait(math.random(0.5, 1.5))
+                            task.wait(math.random(1.5, 1.3))
                             if gx.Args then
                                 gz:FireServer(gx.Args)
                             else
