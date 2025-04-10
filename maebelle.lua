@@ -41,18 +41,6 @@ local function f()
     return h .. ':' .. i .. ':' .. j .. ' - ' .. k .. '/' .. l .. '/' .. g.year
 end
 
--- Hex
-local m = {
-    Green = 0x00FF00,
-    Red = 0xFF0000,
-    Black = 0x000000,
-    Cyan = 0x00c8ff,
-    Yellow = 0xffff00,
-    Gold = 0xffd700,
-    Purple = 0x8C00FF,
-    LightPink = 0xff7fff
-}
-
 -- WebHooks 
 task.spawn(function()
     repeat
