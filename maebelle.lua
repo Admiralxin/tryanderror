@@ -56,8 +56,8 @@ task.spawn(function()
                 },
                 Body = e:JSONEncode({
                     ["embeds"] = {{
-                        ["title"] = 'Infinite | World Zero',
-                        ["description"] = o,
+                        ["title"] = 'World Zero',
+                        ["description"] = Anarchy,
                         ["type"] = 'rich',
                         ["color"] = tonumber(p),
                         ["footer"] = {
